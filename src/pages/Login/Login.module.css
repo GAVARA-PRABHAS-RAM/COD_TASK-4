@@ -1,0 +1,114 @@
+.loginContainer {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-main) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: var(--shadow-lg);
+}
+
+.loginCard h1 {
+  font-size: 2rem;
+  color: var(--neutral-900);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--neutral-600);
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 500;
+  color: var(--neutral-700);
+}
+
+.formGroup input {
+  padding: 0.75rem;
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--primary-main);
+  box-shadow: 0 0 0 3px var(--primary-100);
+}
+
+.error {
+  border-color: var(--error) !important;
+}
+
+.errorText {
+  color: var(--error);
+  font-size: 0.875rem;
+}
+
+.submitButton {
+  background: var(--primary-main);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submitButton:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.signupLink {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--neutral-600);
+}
+
+.signupLink a {
+  color: var(--primary-main);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signupLink a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .loginContainer {
+    padding: 1rem;
+  }
+
+  .loginCard {
+    padding: 1.5rem;
+  }
+} 

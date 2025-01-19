@@ -2,14 +2,15 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import styles from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbar = ({ username }) => {
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
-  const username = "John Doe";
 
   const handleLogout = () => {
     setShowDropdown(false);
-    navigate('/');
+    // Clear any auth state here
+    navigate('/login');
+    window.location.reload(); // Force reload to clear state
   };
 
   return (
@@ -44,11 +45,6 @@ const Navbar = () => {
             className={styles.profileButton}
             onClick={() => setShowDropdown(!showDropdown)}
           >
-            <img 
-              src="https://i.pravatar.cc/150?img=12" 
-              alt="Profile" 
-              className={styles.profileImage} 
-            />
             <span>{username}</span>
           </button>
           {showDropdown && (
